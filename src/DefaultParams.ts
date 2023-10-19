@@ -1,4 +1,4 @@
-import { ChatParams } from "./types/ChatParams"
+import { ChatParams } from "./types/ChatParams.js"
 
 export const defaultChatParams: ChatParams = {
     preset: "simple-1",

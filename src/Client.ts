@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios"
-import { defaultChatParams } from "./DefaultParams"
-import { ChatParams } from "./types/ChatParams"
-import { ClientOptions } from "./types/ClientOptions"
+import { defaultChatParams } from "./DefaultParams.js"
+import { ChatParams } from "./types/ChatParams.js"
+import { ClientOptions } from "./types/ClientOptions.js"
 
 
 export class Client {
