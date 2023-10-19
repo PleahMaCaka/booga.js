@@ -23,9 +23,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build
-          path: |
-            ./build
-            ./package.json
+          path: .
 
 
   publish:
@@ -42,6 +40,6 @@ jobs:
           node-version: 18
 
       - name: Publish
-        run: npm publish ./build
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
