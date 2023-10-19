@@ -1,6 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios"
 import { defaultChatParams } from "./DefaultParams.js"
 import { ChatParams } from "./types/ChatParams.js"
+import { ChatResult } from "./types/ChatResult.js"
 import { ClientOptions } from "./types/ClientOptions.js"
 
 
@@ -16,7 +17,7 @@ export class Client {
         return axios.get(this._uri + "model").then((res: AxiosResponse) => res.data.result)
     }
 
-    async chat(msg: string, params: ChatParams = defaultChatParams, internal: boolean = false) {
+    async chat(msg: string, params: ChatParams = defaultChatParams, internal: boolean = false): Promise<ChatResult> {
         const options: AxiosRequestConfig = {
             method: "POST",
             url: this._uri + "chat",
@@ -29,7 +30,12 @@ export class Client {
         return await axios(options).then((res: AxiosResponse) => {
             // noinspection JSUnresolvedReference
             const history = res.data.results[0].history
-            return (internal ? history.internal : history.visible).flat()
+            const context = (internal ? history.internal : history.visible).flat()
+
+            return <ChatResult>{
+                input: context[0],
+                output: context[1]
+            }
         })
     }
 
