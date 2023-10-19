@@ -23,7 +23,13 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build
-          path: .
+          path: |
+            build
+            src
+            package.json
+            tsconfig.json
+            README.md
+            LICENSE
 
 
   publish:
