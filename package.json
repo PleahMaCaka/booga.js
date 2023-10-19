@@ -1,0 +1,21 @@
+{
+  "name": "booga",
+  "version": "0.1.0",
+  "description": "The Simple oobabooga/text-generation-webui API Wrapper",
+  "author": "PleahMaCaka",
+  "license": "MIT",
+  "homepage": "https://github.com/pleahmacaka/booga.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pleahmacaka/booga.js.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "exam": "ts-node src/Example.ts"
+  },
+  "devDependencies": {
+    "axios": "^1.5.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
