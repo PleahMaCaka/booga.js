@@ -11,6 +11,8 @@ export class Client {
 
     constructor(options: ClientOptions) {
         this._uri = options.uri ? options.uri + "api/v1/" : "http://127.0.0.1:5000/api/v1/"
+
+        if (!this._uri.endsWith("")) this._uri += "/"
     }
 
     async getCurrentModel(): Promise<string> {
