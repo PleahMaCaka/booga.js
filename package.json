@@ -1,6 +1,6 @@
 {
   "name": "booga.js",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "The Simple oobabooga/text-generation-webui API Wrapper",
   "readme": "https://github.com/pleahmacaka/booga.js/blob/main/README.md",
   "author": "PleahMaCaka",
