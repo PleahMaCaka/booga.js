@@ -2,6 +2,7 @@
   "name": "booga.js",
   "version": "0.2.1",
   "description": "The Simple oobabooga/text-generation-webui API Wrapper",
+  "readme": "https://github.com/pleahmacaka/booga.js/blob/main/README.md",
   "author": "PleahMaCaka",
   "license": "MIT",
   "type": "module",
@@ -13,7 +14,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "exam": "node build/Example.js"
+    "exam": "pnpm build && node build/Example.js"
   },
   "dependencies": {
     "axios": "^1.5.1"
