@@ -17,22 +17,23 @@ You can find all parameters in [here](https://github.com/PleahMaCaka/booga.js/bl
 
 ### Example
 
-You can get easily get API endpoints
+You can get to easily get API endpoints
 use [--public-api](https://github.com/oobabooga/text-generation-webui?tab=readme-ov-file#api) argument
 
 ```js
 import { Client } from "booga.js"
 
 const client = new Client({
-    uri: "your uri here"
+    uri: "https://your-share-api-url.trycloudflare.com/api", // default by localhost:5000
 })
 
 client.getCurrentModel().then(model => {
-    console.log(model)
+    console.log(model ?? "No model loaded! :(")
 })
 
-client.chat("Hello Assistant!").then(res => {
-    console.log(`User: ${res.input}`)
-    console.log(`Assistant: ${res.output}`)
+client.chat("Hello Assistant!", {
+    character: "Assistant"
+}).then(res => {
+    console.log(`Assistant: ${res}`)
 })
 ```
