@@ -9,11 +9,11 @@ export class Client {
     public readonly url: string
 
     constructor(options: ClientOptions) {
-        let url = options.uri ?? "http://127.0.0.1:5000/api/v1/"
+        let url = options.url ?? "http://127.0.0.1:5000/api/v1/"
 
-        if (!url.endsWith("/")) url += "/"
-        if (!url.endsWith("api/")) url += "api/"
-        if (!url.endsWith("v1/")) url += "v1/"
+        if (!url.endsWith("/")) {
+            url += "/"
+        }
 
         this.url = url
     }
