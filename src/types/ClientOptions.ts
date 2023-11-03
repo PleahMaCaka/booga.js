@@ -1,3 +1,3 @@
 export interface ClientOptions {
-    uri?: string
+    url?: string
 }
