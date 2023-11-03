@@ -1,7 +1,7 @@
 import { Client } from "./Client.js"
 
 const client = new Client({
-    uri: "https://your-share-api-url.trycloudflare.com/api", // default by localhost:5000
+    url: "https://your-share-api-url.trycloudflare.com/api/v1", // default by localhost:5000
 })
 
 client.getCurrentModel().then(model => {
